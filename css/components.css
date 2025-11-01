@@ -1,0 +1,788 @@
+/* ==========================================
+   LUMI - COMPONENTS.CSS
+   Navbar, Buttons, Forms, Cards, Badges, Footer
+   ========================================== */
+
+/* ==========================================
+   NAVBAR
+   ========================================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-light);
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--amber);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-bulb {
+    width: 24px;
+    height: 24px;
+    color: var(--navy);
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar-link {
+    font-size: 16px;
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.navbar-link:hover {
+    color: var(--coral);
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--navy);
+}
+
+.navbar-toggle i {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar-mobile {
+    display: none;
+    padding: 24px 0;
+    border-top: 1px solid var(--gray-light);
+}
+
+.navbar-mobile.active {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.navbar-link-mobile {
+    padding: 12px 0;
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.navbar-link-mobile:hover {
+    color: var(--coral);
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 16px;
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    white-space: nowrap;
+}
+
+.btn i {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-primary {
+    background: var(--coral);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.35);
+}
+
+.btn-white {
+    background: var(--white);
+    color: var(--coral);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+}
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.btn-lg {
+    padding: 16px 32px;
+    font-size: 18px;
+}
+
+.btn-full {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Social Buttons */
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 20px;
+    background: var(--white);
+    border: 2px solid var(--gray-light);
+    border-radius: 12px;
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-social:hover {
+    border-color: var(--navy);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-social svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ==========================================
+   FORMS
+   ========================================== */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    width: 18px;
+    height: 18px;
+    color: var(--gray-text);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 14px 12px 44px;
+    border: 2px solid var(--gray-light);
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--navy);
+    transition: all var(--transition-fast);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(38, 198, 218, 0.1);
+}
+
+.form-input::placeholder {
+    color: var(--gray-text);
+    opacity: 0.6;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 14px;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: var(--gray-text);
+    transition: color var(--transition-fast);
+    z-index: 1;
+}
+
+.password-toggle:hover {
+    color: var(--navy);
+}
+
+.password-toggle i {
+    width: 18px;
+    height: 18px;
+}
+
+.error-message {
+    display: block;
+    font-size: 12px;
+    color: var(--coral);
+    margin-top: 4px;
+    min-height: 16px;
+}
+
+/* Form Options (Remember me + Forgot password) */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--navy);
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.forgot-link {
+    font-size: 14px;
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.forgot-link:hover {
+    color: var(--coral);
+}
+
+/* Learning Options (4 opciones visuales) */
+.learning-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.learning-option {
+    position: relative;
+    cursor: pointer;
+}
+
+.learning-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.option-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    border: 2px solid var(--gray-light);
+    border-radius: 12px;
+    transition: all var(--transition-fast);
+}
+
+.option-content i {
+    width: 32px;
+    height: 32px;
+    color: var(--gray-text);
+    transition: color var(--transition-fast);
+}
+
+.option-content span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.learning-option input[type="radio"]:checked + .option-content {
+    border-color: var(--teal);
+    background: rgba(38, 198, 218, 0.05);
+}
+
+.learning-option input[type="radio"]:checked + .option-content i {
+    color: var(--teal);
+}
+
+.learning-option:hover .option-content {
+    border-color: var(--teal);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   TABS
+   ========================================== */
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    background: var(--cream);
+    padding: 6px;
+    border-radius: 12px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-text);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.tab:hover {
+    color: var(--navy);
+}
+
+.tab-active {
+    background: var(--white);
+    color: var(--navy);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================
+   CARDS
+   ========================================== */
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--gray-light);
+    transition: all var(--transition-normal);
+}
+
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(38, 198, 218, 0.25);
+    border-color: var(--teal);
+}
+
+.card-icon-large {
+    width: 80px;
+    height: 80px;
+    background: var(--teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    transition: all var(--transition-normal);
+}
+
+.card-hover:hover .card-icon-large {
+    transform: scale(1.1);
+    background: var(--coral);
+}
+
+.card-icon-large i {
+    width: 40px;
+    height: 40px;
+    color: var(--white);
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.card-description {
+    font-size: 16px;
+    color: var(--gray-text);
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ==========================================
+   BADGES
+   ========================================== */
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 8px 0;
+}
+
+.badge-visual {
+    background: rgba(38, 198, 218, 0.15);
+    color: #1B7F8E;
+}
+
+.badge-audio {
+    background: rgba(149, 117, 205, 0.15);
+    color: #5E35B1;
+}
+
+.badge-hands {
+    background: rgba(255, 138, 101, 0.15);
+    color: #D84315;
+}
+
+.badge-logic {
+    background: rgba(92, 107, 192, 0.15);
+    color: #3949AB;
+}
+
+.badge-colab {
+    background: rgba(92, 107, 192, 0.15);
+    color: #3949AB;
+}
+
+/* ==========================================
+   AVATARES
+   ========================================== */
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    box-shadow: var(--shadow-md);
+}
+
+.avatar i {
+    width: 40px;
+    height: 40px;
+}
+
+.avatar-visual {
+    border: 4px solid var(--visual-teal);
+    background: rgba(38, 198, 218, 0.1);
+    color: var(--visual-teal);
+}
+
+.avatar-audio {
+    border: 4px solid var(--audio-purple);
+    background: rgba(149, 117, 205, 0.1);
+    color: var(--audio-purple);
+}
+
+.avatar-hands {
+    border: 4px solid var(--hands-orange);
+    background: rgba(255, 138, 101, 0.1);
+    color: var(--hands-orange);
+}
+
+.avatar-logic {
+    border: 4px solid var(--logic-indigo);
+    background: rgba(92, 107, 192, 0.1);
+    color: var(--logic-indigo);
+}
+
+.avatar-colab {
+    border: 4px solid var(--colab-cyan);
+    background: rgba(0, 191, 165, 0.1);
+    color: var(--colab-cyan);
+}
+
+/* ==========================================
+   PROGRESS BARS
+   ========================================== */
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.skill-value {
+    color: var(--amber);
+}
+
+.skill-progress {
+    height: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    border-radius: 8px;
+    transition: width 1s ease;
+    animation: fillBar 1s ease forwards;
+}
+
+.skill-fill-math {
+    background: linear-gradient(90deg, var(--coral), var(--amber));
+}
+
+.skill-fill-focus {
+    background: linear-gradient(90deg, var(--teal), #00BCD4);
+}
+
+.skill-fill-const {
+    background: linear-gradient(90deg, var(--purple), #BA68C8);
+}
+
+/* Progress container (otra variante) */
+.progress-container {
+    margin: 16px 0;
+}
+
+.progress-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.progress-label i {
+    width: 16px;
+    height: 16px;
+    color: var(--amber);
+    fill: var(--amber);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--gray-light);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--teal);
+    border-radius: 8px;
+    transition: width 1s ease;
+}
+
+/* ==========================================
+   DIVIDER
+   ========================================== */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 32px 0;
+    color: var(--gray-text);
+    font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gray-light);
+}
+
+.divider span {
+    padding: 0 16px;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+    background: var(--navy);
+    color: var(--white);
+    padding: 64px 0 32px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footer-logo i {
+    width: 32px;
+    height: 32px;
+    color: var(--amber);
+}
+
+.footer-tagline {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--amber);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+/* ==========================================
+   RESPONSIVE - COMPONENTS
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .navbar-menu {
+        gap: 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+    
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .learning-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .btn-sm {
+        width: auto;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .card {
+        padding: 24px;
+    }
+    
+    .tabs {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .social-buttons {
+        grid-template-columns: 1fr;
+    }
+}

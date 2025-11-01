@@ -1,434 +1,639 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lumi - Tu Brújula de Aprendizaje</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lumi - Aprender puede ser más fácil y mucho más tuyo. Plataforma educativa que se adapta a tu estilo de aprendizaje.">
+    <title>Lumi - Aprender a tu manera</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23FFD54F'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='%231B365D' font-family='Arial'>L</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Styles - NUEVO: 3 archivos CSS organizados -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/sections.css">
 </head>
 <body>
-  
-  <!-- Background decorativo -->
-  <div class="background-blobs">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="blob blob-4"></div>
-  </div>
-
-  <!-- Header/Navbar -->
-  <header class="header">
-    <div class="container">
-      <nav class="navbar">
-        <div class="logo">
-          <i data-lucide="sparkles"></i>
-          <span>Lumi</span>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#roles">Roles</a></li>
-          <li><a href="#como-funciona">Cómo Funciona</a></li>
-          <li><a href="#planes">Planes</a></li>
-        </ul>
-        <button class="btn-header">Comenzar Gratis</button>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">
-          Tu Brújula Personal de <span class="gradient-text">Aprendizaje</span>
-        </h1>
-        <p class="hero-subtitle">
-          Descubre, explora y domina nuevas habilidades con rutas personalizadas que se adaptan a ti
-        </p>
-        <div class="hero-buttons">
-          <button class="btn-primary">
-            <span>Comenzar Gratis</span>
-            <i data-lucide="arrow-right"></i>
-          </button>
-          <button class="btn-secondary">
-            <i data-lucide="play-circle"></i>
-            <span>Ver Demo</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Hero Cards -->
-      <div class="hero-cards">
-        <div class="card card-cyan">
-          <div class="card-overlay"></div>
-          <div class="card-content">
-            <i data-lucide="star"></i>
-            <h3>Personalizado</h3>
-            <p>Rutas adaptadas a tu ritmo y objetivos</p>
-          </div>
-        </div>
-
-        <div class="card card-purple">
-          <div class="card-overlay"></div>
-          <div class="card-content">
-            <i data-lucide="zap"></i>
-            <h3>Interactivo</h3>
-            <p>Aprende haciendo, no solo leyendo</p>
-          </div>
-        </div>
-
-        <div class="card card-blue">
-          <div class="card-overlay"></div>
-          <div class="card-content">
-            <i data-lucide="users"></i>
-            <h3>Comunidad</h3>
-            <p>Crece junto a otros exploradores</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Roles Section -->
-  <section id="roles" class="roles-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Encuentra tu Estilo de Aprendizaje</h2>
-        <p class="section-subtitle">Cada persona aprende diferente. Descubre qué tipo de explorador eres</p>
-      </div>
-
-      <div class="roles-grid">
-        <!-- Rol 1: Pionero -->
-        <div class="role-card role-cyan">
-          <div class="role-overlay"></div>
-          <div class="role-content">
-            <div class="role-header">
-              <i data-lucide="compass"></i>
-              <h3>Pionero</h3>
-            </div>
-            <p class="role-description">Para quienes les gusta explorar territorios desconocidos</p>
-            <ul class="role-features">
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Rutas de aprendizaje aventureras</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Desafíos que expanden tu zona de confort</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Proyectos innovadores y experimentales</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Rol 2: Visionauta -->
-        <div class="role-card role-purple">
-          <div class="role-overlay"></div>
-          <div class="role-content">
-            <div class="role-header">
-              <i data-lucide="eye"></i>
-              <h3>Visionauta</h3>
-            </div>
-            <p class="role-description">Para quienes ven el mundo desde múltiples perspectivas</p>
-            <ul class="role-features">
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Explora patrones entre disciplinas</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Conecta ideas aparentemente dispares</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Herramientas de pensamiento lateral</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Rol 3: Constructor -->
-        <div class="role-card role-pink">
-          <div class="role-overlay"></div>
-          <div class="role-content">
-            <div class="role-header">
-              <i data-lucide="hammer"></i>
-              <h3>Constructor</h3>
-            </div>
-            <p class="role-description">Para quienes aprenden creando y construyendo</p>
-            <ul class="role-features">
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Proyectos prácticos desde el día uno</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Portfolio que muestra tu progreso</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Feedback de la comunidad maker</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Cómo Funciona Section -->
-  <section id="como-funciona" class="how-it-works">
-    <div class="container">
-      <div class="how-it-works-grid">
-        <!-- Lado izquierdo: Brújula -->
-        <div class="compass-container">
-          <div class="compass-glow"></div>
-          <div class="compass">
-            <div class="compass-bg"></div>
-            <div class="compass-ring"></div>
-            <!-- Marcas cardinales -->
-            <div class="compass-mark north">N</div>
-            <div class="compass-mark south">S</div>
-            <div class="compass-mark west">O</div>
-            <div class="compass-mark east">E</div>
-            <!-- Aguja -->
-            <div class="compass-needle"></div>
-            <!-- Centro -->
-            <div class="compass-center"></div>
-          </div>
-        </div>
-
-        <!-- Lado derecho: Pasos -->
-        <div class="steps-container">
-          <h2 class="section-title">Cómo Funciona</h2>
-          <p class="section-subtitle-small">Tu viaje de aprendizaje en 4 simples pasos</p>
-
-          <div class="steps">
-            <!-- Paso 1 -->
-            <div class="step">
-              <div class="step-connector"></div>
-              <div class="step-card step-cyan">
-                <div class="step-icon">
-                  <i data-lucide="target"></i>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <!-- Logo -->
+                <div class="navbar-brand">
+                    <div class="logo-icon">
+                        <i data-lucide="lightbulb" class="logo-bulb"></i>
+                    </div>
+                    <span class="logo-text">LUMI</span>
                 </div>
-                <div class="step-text">
-                  <h3>Define tu Destino</h3>
-                  <p>Cuéntanos qué quieres aprender y por qué. Lumi creará tu mapa personalizado</p>
+                
+                <!-- Desktop Menu -->
+                <div class="navbar-menu">
+                    <a href="#que-es-lumi" class="navbar-link">Qué es Lumi</a>
+                    <a href="#rutas" class="navbar-link">Rutas</a>
+                    <a href="#testimonios" class="navbar-link">Testimonios</a>
+                    <a href="login.html" class="btn btn-primary btn-sm">Iniciar sesión</a>
                 </div>
-              </div>
+                
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggle" id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+                    <i data-lucide="menu"></i>
+                </button>
             </div>
-
-            <!-- Paso 2 -->
-            <div class="step">
-              <div class="step-connector"></div>
-              <div class="step-card step-purple">
-                <div class="step-icon">
-                  <i data-lucide="map"></i>
+            
+            <!-- Mobile Menu -->
+            <div class="navbar-mobile" id="mobile-menu">
+                <a href="#que-es-lumi" class="navbar-link-mobile">Qué es Lumi</a>
+                <a href="#rutas" class="navbar-link-mobile">Rutas</a>
+                <a href="#testimonios" class="navbar-link-mobile">Testimonios</a>
+                <a href="login.html" class="btn btn-primary" style="width: 100%; text-align: center;">Iniciar sesión</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Content -->
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Aprender puede ser más fácil <span class="text-coral">(y mucho más tuyo)</span>.
+                    </h1>
+                    <p class="hero-subtitle">
+                        Lumi crea rutas de aprendizaje que se adaptan a ti. No importa si estás empezando, retomando o buscando mejorar, aquí cada paso se siente posible.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="login.html" class="btn btn-primary btn-lg">
+                            <i data-lucide="star"></i>
+                            Empieza tu ruta personalizada
+                        </a>
+                        <p class="hero-microtext">Sin presión. A tu ritmo. Con tu estilo.</p>
+                    </div>
                 </div>
-                <div class="step-text">
-                  <h3>Sigue tu Ruta</h3>
-                  <p>Completa misiones, proyectos y desafíos diseñados para tu nivel y objetivos</p>
+                
+                <!-- Image -->
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/hero.png" alt="Lumi - Aprender a tu manera" class="hero-img">
+                    </div>
                 </div>
-              </div>
             </div>
-
-            <!-- Paso 3 -->
-            <div class="step">
-              <div class="step-connector"></div>
-              <div class="step-card step-pink">
-                <div class="step-icon">
-                  <i data-lucide="trophy"></i>
+        </div>
+    </section>
+    
+    <!-- Qué es Lumi -->
+    <section id="que-es-lumi" class="section section-white">
+        <div class="container">
+            <div class="section-with-image">
+                <!-- Imagen a la izquierda -->
+                <div class="section-image">
+                    <img src="assets/que-es-lumi.png" alt="Lumi - Cómo aprendes">
                 </div>
-                <div class="step-text">
-                  <h3>Gana Experiencia</h3>
-                  <p>Desbloquea logros, sube de nivel y acumula puntos mientras aprendes</p>
+                
+                <!-- Texto a la derecha -->
+                <div class="section-text">
+                    <h2 class="section-title">Lo que estudias no cambia. <span class="text-teal">Cómo lo aprendes, sí.</span></h2>
+                    <p class="section-description">
+                        Lumi es una plataforma que entiende que no todos aprendemos igual. Si te cuesta concentrarte, si quieres mejorar tus notas, o si solo quieres entender mejor lo que ves en clase, Lumi te acompaña con un plan hecho para ti.
+                    </p>
+                    <p class="section-tagline">
+                        Más claridad. Más motivación. Más confianza.
+                    </p>
                 </div>
-              </div>
             </div>
-
-            <!-- Paso 4 -->
-            <div class="step">
-              <div class="step-connector"></div>
-              <div class="step-card step-gradient">
-                <div class="step-icon">
-                  <i data-lucide="gift"></i>
+        </div>
+    </section>
+    
+    <!-- Cómo Funciona -->
+    <section class="section section-cream">
+        <div class="container">
+            <div class="section-header-center">
+                <h2 class="section-title">Te conoce, te guía y te acompaña.</h2>
+            </div>
+            
+            <div class="grid-3">
+                <!-- Card 1 -->
+                <div class="card card-hover">
+                    <div class="card-icon-large">
+                        <i data-lucide="handshake"></i>
+                    </div>
+                    <h3 class="card-title">Te conoce</h3>
+                    <p class="card-description">
+                        Te ayudamos a descubrir cómo aprendes mejor. Te damos una guía, pero tú eliges tu ruta.
+                    </p>
                 </div>
-                <div class="step-text">
-                <h3>Canjea Recompensas</h3>
-                <p>Accede a beneficios exclusivos, contenido premium y experiencias únicas</p>
-              </div>
-              </div>
+                
+                <!-- Card 2 -->
+                <div class="card card-hover">
+                    <div class="card-icon-large">
+                        <i data-lucide="compass"></i>
+                    </div>
+                    <h3 class="card-title">Te guía</h3>
+                    <p class="card-description">
+                        Creamos un plan que combina tus fortalezas con tus metas. Sin pasos confusos ni presiones innecesarias.
+                    </p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="card card-hover">
+                    <div class="card-icon-large">
+                        <i data-lucide="star"></i>
+                    </div>
+                    <h3 class="card-title">Te acompaña</h3>
+                    <p class="card-description">
+                        Con apoyo constante, recordatorios amables y recompensas por tu progreso.
+                    </p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Planes Section -->
-  <section id="planes" class="plans-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Elige tu Plan de Exploración</h2>
-        <p class="section-subtitle">Flexibilidad para aprender a tu manera</p>
-      </div>
-
-      <div class="plans-grid">
-        <!-- Plan 1: Mentoría 1 a 1 -->
-        <div class="plan-card plan-cyan">
-          <div class="plan-overlay"></div>
-          <div class="plan-content">
-            <div class="plan-header">
-              <h3>Mentoría 1 a 1</h3>
-              <i data-lucide="message-circle"></i>
+    </section>
+    
+    <!-- Rutas de Aprendizaje -->
+    <section id="rutas" class="section section-white">
+        <div class="container">
+            <div class="section-header-center">
+                <h2 class="section-title">Tu estilo. Tu ritmo. <span class="text-coral">Tu ruta.</span></h2>
+                <p class="section-description">
+                    Cada persona aprende de forma diferente. Por eso en Lumi eliges la ruta que mejor se adapta a ti.
+                </p>
             </div>
-            <p class="plan-price">$120/mes</p>
-            <ul class="plan-features">
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Sesiones personalizadas con mentores expertos</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Feedback directo sobre tus proyectos</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Plan de desarrollo personalizado</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Acceso a comunidad exclusiva</span>
-              </li>
-            </ul>
-            <button class="plan-btn plan-btn-cyan">Iniciar Mentoría</button>
-          </div>
-        </div>
-
-        <!-- Plan 2: Autoguiado Premium -->
-        <div class="plan-card plan-purple">
-          <div class="plan-overlay"></div>
-          <div class="plan-content">
-            <div class="plan-header">
-              <h3>Autoguiado Premium</h3>
-              <i data-lucide="rocket"></i>
+            
+            <!-- Tabs de Perfiles -->
+            <div class="route-tabs">
+                <div class="route-tab active" data-profile="visual">
+                    <div class="route-tab-icon icon-visual">
+                        <i data-lucide="eye"></i>
+                    </div>
+                    <span class="route-tab-name">Visionauta</span>
+                </div>
+                
+                <div class="route-tab" data-profile="audio">
+                    <div class="route-tab-icon icon-audio">
+                        <i data-lucide="headphones"></i>
+                    </div>
+                    <span class="route-tab-name">Audioexplorador</span>
+                </div>
+                
+                <div class="route-tab" data-profile="logic">
+                    <div class="route-tab-icon icon-logic">
+                        <i data-lucide="puzzle"></i>
+                    </div>
+                    <span class="route-tab-name">Logimaster</span>
+                </div>
+                
+                <div class="route-tab" data-profile="hands">
+                    <div class="route-tab-icon icon-hands">
+                        <i data-lucide="hand"></i>
+                    </div>
+                    <span class="route-tab-name">Manos a la obra</span>
+                </div>
+                
+                <div class="route-tab" data-profile="colab">
+                    <div class="route-tab-icon icon-colab">
+                        <i data-lucide="message-circle"></i>
+                    </div>
+                    <span class="route-tab-name">ColabHero</span>
+                </div>
             </div>
-            <p class="plan-price">$49/mes</p>
-            <ul class="plan-features">
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Acceso ilimitado a todas las rutas</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Proyectos prácticos y casos reales</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Sistema de gamificación completo</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Certificados verificables con tecnología Blockchain</span>
-              </li>
-            </ul>
-            <button class="plan-btn plan-btn-purple">Comenzar Premium</button>
-          </div>
-        </div>
-
-        <!-- Plan 3: Explorador Libre -->
-        <div class="plan-card plan-pink">
-          <div class="plan-overlay"></div>
-          <div class="plan-content">
-            <div class="plan-header">
-              <h3>Explorador Libre</h3>
-              <i data-lucide="compass"></i>
+            
+            <!-- Preview de cada perfil -->
+            <div class="route-preview active" id="preview-visual">
+                <div class="route-preview-image">
+                    <img src="assets/profile-visual.png" alt="Visionauta">
+                </div>
+                <div class="route-preview-content">
+                    <h3>Visionauta</h3>
+                    <span class="badge badge-visual">VISUAL</span>
+                    <p class="route-preview-description">
+                        Aprende mejor cuando puedes ver la información. Los diagramas, mapas mentales, colores y esquemas te ayudan a entender y recordar más fácilmente.
+                    </p>
+                    <ul class="route-preview-features">
+                        <li><i data-lucide="check-circle"></i> Mapas mentales interactivos</li>
+                        <li><i data-lucide="check-circle"></i> Diagramas y esquemas visuales</li>
+                        <li><i data-lucide="check-circle"></i> Videos educativos animados</li>
+                        <li><i data-lucide="check-circle"></i> Códigos de colores para organizar</li>
+                    </ul>
+                </div>
             </div>
-            <p class="plan-price">Gratis</p>
-            <ul class="plan-features">
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Acceso a rutas básicas</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Comunidad de aprendizaje</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Progreso básico y logros</span>
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i>
-                <span>Recursos fundamentales especializados</span>
-              </li>
-            </ul>
-            <button class="plan-btn plan-btn-pink">Empezar Gratis</button>
-          </div>
+            
+            <div class="route-preview" id="preview-audio">
+                <div class="route-preview-image">
+                    <img src="assets/profile-audio.png" alt="Audioexplorador">
+                </div>
+                <div class="route-preview-content">
+                    <h3>Audioexplorador</h3>
+                    <span class="badge badge-audio">AUDITIVO</span>
+                    <p class="route-preview-description">
+                        Aprendes escuchando y hablando. Las explicaciones en voz alta, podcasts y conversaciones te ayudan a procesar y retener información de manera natural.
+                    </p>
+                    <ul class="route-preview-features">
+                        <li><i data-lucide="check-circle"></i> Podcasts y audiolibros educativos</li>
+                        <li><i data-lucide="check-circle"></i> Explicaciones en audio paso a paso</li>
+                        <li><i data-lucide="check-circle"></i> Debates y discusiones guiadas</li>
+                        <li><i data-lucide="check-circle"></i> Resúmenes narrados</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="route-preview" id="preview-logic">
+                <div class="route-preview-image">
+                    <img src="assets/profile-logic.png" alt="Logimaster">
+                </div>
+                <div class="route-preview-content">
+                    <h3>Logimaster</h3>
+                    <span class="badge badge-logic">LÓGICO</span>
+                    <p class="route-preview-description">
+                        Te gusta analizar, razonar y encontrar patrones. Los problemas, ejercicios estructurados y el pensamiento crítico son tu fuerte.
+                    </p>
+                    <ul class="route-preview-features">
+                        <li><i data-lucide="check-circle"></i> Ejercicios de resolución de problemas</li>
+                        <li><i data-lucide="check-circle"></i> Análisis de casos paso a paso</li>
+                        <li><i data-lucide="check-circle"></i> Conexión de conceptos lógicos</li>
+                        <li><i data-lucide="check-circle"></i> Desafíos de pensamiento crítico</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="route-preview" id="preview-hands">
+                <div class="route-preview-image">
+                    <img src="assets/profile-hands.png" alt="Manos a la obra">
+                </div>
+                <div class="route-preview-content">
+                    <h3>Manos a la obra</h3>
+                    <span class="badge badge-hands">PRÁCTICO</span>
+                    <p class="route-preview-description">
+                        Aprendes haciendo. Los experimentos, proyectos y actividades prácticas te ayudan a comprender mejor que solo leer o escuchar.
+                    </p>
+                    <ul class="route-preview-features">
+                        <li><i data-lucide="check-circle"></i> Proyectos hands-on paso a paso</li>
+                        <li><i data-lucide="check-circle"></i> Experimentos y actividades prácticas</li>
+                        <li><i data-lucide="check-circle"></i> Aprender haciendo y creando</li>
+                        <li><i data-lucide="check-circle"></i> Simulaciones interactivas</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="route-preview" id="preview-colab">
+                <div class="route-preview-image">
+                    <img src="assets/profile-colab.png" alt="ColabHero">
+                </div>
+                <div class="route-preview-content">
+                    <h3>ColabHero</h3>
+                    <span class="badge badge-colab">SOCIAL</span>
+                    <p class="route-preview-description">
+                        Aprendes mejor en grupo. Compartir ideas, discutir conceptos y trabajar en equipo te motiva y te ayuda a entender mejor.
+                    </p>
+                    <ul class="route-preview-features">
+                        <li><i data-lucide="check-circle"></i> Grupos de estudio colaborativos</li>
+                        <li><i data-lucide="check-circle"></i> Debates y discusiones guiadas</li>
+                        <li><i data-lucide="check-circle"></i> Proyectos en equipo</li>
+                        <li><i data-lucide="check-circle"></i> Comunidad de aprendizaje activa</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Final -->
-  <section class="final-cta">
-    <div class="container">
-      <div class="cta-content">
-        <h2 class="cta-title">¿Listo para comenzar tu viaje?</h2>
-        <p class="cta-subtitle">Únete a miles de exploradores que ya están transformando su aprendizaje</p>
-        <button class="btn-cta">
-          <span>Comenzar mi Viaje</span>
-          <i data-lucide="sparkles"></i>
-          <div class="btn-glow"></div>
-        </button>
-        <p class="cta-note">Sin tarjeta de crédito requerida • Cancela cuando quieras</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <div class="logo">
-            <i data-lucide="sparkles"></i>
-            <span>Lumi</span>
-          </div>
-          <p>Tu brújula personal de aprendizaje</p>
+    </section>
+    
+    <!-- Testimonios -->
+    <section id="testimonios" class="section section-cream">
+        <div class="container">
+            <div class="section-header-center">
+                <h2 class="section-title">Lo que dicen quienes usan Lumi</h2>
+            </div>
+            
+            <div class="grid-3">
+                <!-- Testimonio 1 -->
+                <div class="card player-card">
+                    <div class="player-card-front">
+                        <div class="player-header">
+                            <div class="avatar avatar-visual">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="player-info">
+                                <h3 class="player-name">Sofía</h3>
+                                <span class="player-age">16 años</span>
+                            </div>
+                        </div>
+                        <span class="badge badge-visual">VISIONAUTA</span>
+                        <p class="player-quote">
+                            "Nunca había entendido matemáticas así de fácil. Ahora me gusta aprender."
+                        </p>
+                        <div class="player-level">
+                            <i data-lucide="star"></i>
+                            <span>Nivel 18</span>
+                        </div>
+                        <div class="hover-hint">
+                            <i data-lucide="info"></i>
+                            Ver estadísticas
+                        </div>
+                    </div>
+                    
+                    <div class="player-card-back">
+                        <h4 class="stats-title">Estadísticas de Aprendizaje</h4>
+                        
+                        <div class="skill-bar">
+                            <div class="skill-label">
+                                <span>Matemáticas</span>
+                                <span class="skill-value">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill skill-fill-math" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-bar">
+                            <div class="skill-label">
+                                <span>Concentración</span>
+                                <span class="skill-value">78%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill skill-fill-focus" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-bar">
+                            <div class="skill-label">
+                                <span>Constancia</span>
+                                <span class="skill-value">92%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill skill-fill-const" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="improvement">
+                            <i data-lucide="trending-up"></i>
+                            <span>+25% en calificaciones</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 2 -->
+                <div class="card player-card">
+                    <div class="player-card-front">
+                        <div class="player-header">
+                            <div class="avatar avatar-hands">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="player-info">
+                                <h3 class="player-name">Camila</h3>
+                                <span class="player-age">18 años</span>
+                            </div>
+                        </div>
+                        <span class="badge badge-hands">MANOS A LA OBRA</span>
+                        <p class="player-quote">
+                            "Me ayudó a mejorar mis notas sin estrés. Me siento más segura."
+                        </p>
+                        <div class="player-level">
+                            <i data-lucide="star"></i>
+                            <span>Nivel 24</span>
+                        </div>
+                        <div class="hover-hint">
+                            <i data-lucide="info"></i>
+                            Ver estadísticas
+                        </div>
+                    </div>
+                    
+                    <div class="player-card-back">
+                        <h4 class="stats-title">Estadísticas de Aprendizaje</h4>
+                        
+                        <div class="skill-bar">
+                            <div class="skill-label">
+                                <span>Ciencias</span>
+                                <span class="skill-value">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill skill-fill-math" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-bar">
+                            <div class="skill-label">
+                                <span>Práctica</span>
+                                <span class="skill-value">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill skill-fill-focus" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-bar">
+                            <div class="skill-label">
+                                <span>Confianza</span>
+                                <span class="skill-value">88%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill skill-fill-const" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="improvement">
+                            <i data-lucide="trending-up"></i>
+                            <span>+30% en calificaciones</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 3 -->
+                <div class="card player-card">
+                    <div class="player-card-front">
+                        <div class="player-header">
+                            <div class="avatar avatar-logic">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="player-info">
+                                <h3 class="player-name">Luis</h3>
+                                <span class="player-age">20 años</span>
+                            </div>
+                        </div>
+                        <span class="badge badge-logic">LOGIMASTER</span>
+                        <p class="player-quote">
+                            "Lo uso para reforzar lo que veo en clase. Es como tener un profe que me entiende."
+                        </p>
+                        <div class="player-level">
+                            <i data-lucide="star"></i>
+                            <span>Nivel 31</span>
+                        </div>
+                        <div class="hover-hint">
+                            <i data-lucide="info"></i>
+                            Ver estadísticas
+                        </div>
+                    </div>
+                    
+                    <div class="player-card-back">
+                        <h4 class="stats-title">Estadísticas de Aprendizaje</h4>
+                        
+                        <div class="skill-bar">
+                            <div class="skill-label">
+                                <span>Lógica</span>
+                                <span class="skill-value">94%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill skill-fill-math" style="width: 94%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-bar">
+                            <div class="skill-label">
+                                <span>Resolución</span>
+                                <span class="skill-value">89%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill skill-fill-focus" style="width: 89%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-bar">
+                            <div class="skill-label">
+                                <span>Autonomía</span>
+                                <span class="skill-value">96%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill skill-fill-const" style="width: 96%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="improvement">
+                            <i data-lucide="trending-up"></i>
+                            <span>+35% en calificaciones</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Producto</h4>
-            <a href="#">Características</a>
-            <a href="#">Precios</a>
-            <a href="#">Casos de Uso</a>
-          </div>
-          <div class="footer-column">
-            <h4>Recursos</h4>
-            <a href="#">Blog</a>
-            <a href="#">Guías</a>
-            <a href="#">Ayuda</a>
-          </div>
-          <div class="footer-column">
-            <h4>Empresa</h4>
-            <a href="#">Sobre Nosotros</a>
-            <a href="#">Contacto</a>
-            <a href="#">Privacidad</a>
-          </div>
+    </section>
+    
+    <!-- Lumi para Padres -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-with-image">
+                <!-- Imagen a la izquierda -->
+                <div class="section-image">
+                    <img src="assets/acompañamos.png" alt="Lumi para padres">
+                </div>
+                
+                <!-- Contenido a la derecha -->
+                <div class="section-text">
+                    <h2 class="section-title">Acompañamos el aprendizaje, no lo reemplazamos.</h2>
+                    <p class="section-description">
+                        En Lumi, los padres pueden seguir el progreso de sus hijos y celebrar sus logros sin presiones. Todo de manera segura, clara y con el apoyo de nuestro equipo educativo.
+                    </p>
+                    
+                    <!-- Lista de beneficios -->
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i data-lucide="eye"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Seguimiento en tiempo real</h4>
+                                <p>Ve el progreso de tu hijo de forma clara y sencilla.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Reportes personalizados</h4>
+                                <p>Recibe resúmenes semanales de logros y áreas de mejora.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i data-lucide="message-circle"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Comunicación directa</h4>
+                                <p>Habla con nuestro equipo educativo cuando lo necesites.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i data-lucide="heart"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Sin presión, con celebración</h4>
+                                <p>Acompañamos el proceso sin generar estrés innecesario.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Lumi. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Script para inicializar los iconos de Lucide -->
-  <script src="script.js"></script>
+    </section> 
+    
+    <!-- Cierre Inspiracional -->
+    <section class="section section-coral">
+        <div class="container">
+            <div class="section-header-center">
+                <h2 class="section-title-light">Porque aprender no debería ser un reto… sino una aventura.</h2>
+                <p class="section-description-light">
+                    Empieza hoy con Lumi y descubre lo que puedes lograr cuando aprendes a tu manera.
+                </p>
+                <a href="login.html" class="btn btn-white btn-lg">
+                    <i data-lucide="sparkles"></i>
+                    Empieza tu aventura con Lumi
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i data-lucide="lightbulb"></i>
+                        <span>LUMI</span>
+                    </div>
+                    <p class="footer-tagline">Aprender a tu manera</p>
+                </div>
+                
+                <!-- Links 1 -->
+                <div class="footer-links">
+                    <h4 class="footer-title">Plataforma</h4>
+                    <a href="#">Acerca de Lumi</a>
+                    <a href="#">Preguntas frecuentes</a>
+                    <a href="#">Comunidad Lumi</a>
+                </div>
+                
+                <!-- Links 2 -->
+                <div class="footer-links">
+                    <h4 class="footer-title">Soporte</h4>
+                    <a href="#">Contacto</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos de uso</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Lumi • Hecho con <i data-lucide="heart" style="width: 16px; height: 16px; color: var(--coral); fill: var(--coral); display: inline;"></i> y mucho café</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="./main.js"></script>
+    <script src="./auth.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>

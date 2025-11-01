@@ -1,0 +1,318 @@
+/* ==========================================
+   LUMI - BASE.CSS
+   Variables, Reset, Tipografía, Utilidades
+   ========================================== */
+
+/* ==========================================
+   VARIABLES CSS
+   ========================================== */
+:root {
+    /* Colores Primarios */
+    --navy: #1B365D;
+    --teal: #26C6DA;
+    --coral: #FF6B6B;
+    --purple: #9575CD;
+    --amber: #FFD54F;
+     
+    
+    /* Neutrales */
+    --white: #FFFFFF;
+    --cream: #FAFAFA;
+    --gray-light: #E0E0E0;
+    --gray-text: #757575;
+    
+    /* Perfiles de Aprendizaje */
+    --visual-teal: #26C6DA;
+    --audio-purple: #EC407A;
+    --hands-orange: #FF8A65;
+    --logic-indigo: #9575CD;
+    --colab-blue: #5C6BC0;
+    
+    /* Tipografía */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.15);
+    
+    /* Transiciones */
+    --transition-fast: 200ms ease;
+    --transition-normal: 300ms ease;
+    --transition-slow: 500ms ease;
+}
+
+/* ==========================================
+   RESET & NORMALIZACIÓN
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--navy);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   TIPOGRAFÍA BASE
+   ========================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--navy);
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ==========================================
+   CONTAINER
+   ========================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+}
+
+/* ==========================================
+   UTILIDADES DE TEXTO
+   ========================================== */
+.text-coral {
+    color: var(--coral);
+}
+
+.text-teal {
+    color: var(--teal);
+}
+
+.text-purple {
+    color: var(--purple);
+}
+
+.text-amber {
+    color: var(--amber);
+}
+
+.text-navy {
+    color: var(--navy);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* ==========================================
+   ANIMACIONES GLOBALES
+   ========================================== */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes fillBar {
+    from {
+        width: 0%;
+    }
+}
+
+/* ==========================================
+   ACCESIBILIDAD
+   ========================================== */
+*:focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+::selection {
+    background-color: var(--amber);
+    color: var(--navy);
+}
+
+/* Keyboard navigation styles */
+body.keyboard-navigation *:focus {
+    outline: 3px solid var(--coral);
+    outline-offset: 2px;
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ==========================================
+   REDUCE MOTION (Accesibilidad)
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE TYPOGRAPHY
+   ========================================== */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 48px;
+    }
+    
+    h2 {
+        font-size: 40px;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+}

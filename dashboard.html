@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard de Lumi - Tu espacio de aprendizaje personalizado">
+    <title>Dashboard - Lumi</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23FFD54F'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='%231B365D' font-family='Arial'>L</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-body">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <i data-lucide="lightbulb"></i>
+                </div>
+                <span class="logo-text">LUMI</span>
+            </div>
+        </div>
+        
+                        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-tab="inicio">
+                <i data-lucide="home"></i>
+                <span>Inicio</span>
+            </a>
+            <a href="#" class="nav-item" data-tab="recomendaciones">
+                <i data-lucide="compass"></i>
+                <span>Recomendaciones</span>
+            </a>
+            <a href="#" class="nav-item" data-tab="habilidades">
+                <i data-lucide="briefcase"></i>
+                <span>Habilidades para la vida</span>
+            </a>
+            <a href="#" class="nav-item" data-tab="mis-recompensas">
+                <i data-lucide="gift"></i>
+                <span>Mis Recompensas</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="book-open"></i>
+                <span>Mis Rutas</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="trophy"></i>
+                <span>Logros</span>
+            </a>
+            <a href="tienda.html" class="nav-item">
+                <i data-lucide="shopping-bag"></i>
+                <span>Tienda</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="bar-chart-2"></i>
+                <span>Progreso</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item">
+                <i data-lucide="settings"></i>
+                <span>Configuración</span>
+            </a>
+            <a href="index.html" class="nav-item">
+                <i data-lucide="log-out"></i>
+                <span>Cerrar sesión</span>
+            </a>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        
+        <!-- Top Bar -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="mobile-menu-btn" id="mobile-sidebar-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+                
+                <!-- Barra de búsqueda -->
+                <div class="header-search">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Buscar rutas, lecciones, recursos...">
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <button class="header-icon-btn">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                
+                <div class="user-menu">
+                    <div class="user-avatar">
+                        <i data-lucide="user"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            
+            <!-- Bienvenida MEJORADA -->
+            <div class="welcome-banner">
+                <div class="welcome-left">
+                    <div class="welcome-avatar">
+                        <div class="avatar-badge badge-visual">
+                            <i data-lucide="eye"></i>
+                        </div>
+                    </div>
+                    <div class="welcome-text">
+                        <h1 class="welcome-title">¡Hola, <span id="user-name">Usuario</span>! 👋</h1>
+                        <p class="welcome-subtitle" id="welcome-message">Listo para seguir aprendiendo hoy</p>
+                        <div class="welcome-profile">
+                            <span class="badge badge-visual">VISIONAUTA</span>
+                            <span class="welcome-streak">
+                                <i data-lucide="flame"></i>
+                                7 días de racha 🔥
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="welcome-right">
+                    <div class="next-reward">
+                        <div class="reward-icon">
+                            <i data-lucide="gift"></i>
+                        </div>
+                        <div class="reward-info">
+                            <p class="reward-label">Próxima recompensa</p>
+                            <h4 class="reward-title">Badge "Constancia"</h4>
+                            <div class="reward-progress">
+                                <div class="reward-bar">
+                                    <div class="reward-fill" style="width: 75%;"></div>
+                                </div>
+                                <span class="reward-text">150 XP para desbloquear</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Cards Row -->
+            <div class="stats-grid">
+                <!-- Lumi Coins - DESTACADO -->
+                <div class="stat-card coins-card">
+                    <div class="stat-icon" style="background: var(--amber);">
+                        <i data-lucide="coins"></i>
+                    </div>
+                    <div class="stat-info">
+                        <p class="stat-label">Lumi Coins</p>
+                        <h3 class="stat-value" id="coinsBalance">1,250</h3>
+                    </div>
+                    <a href="tienda.html" class="quick-link">Ver tienda →</a>
+                </div>
+                
+                <!-- Nivel -->
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--purple);">
+                        <i data-lucide="star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <p class="stat-label">Nivel Actual</p>
+                        <h3 class="stat-value">18</h3>
+                        <p class="stat-sublabel">Explorador Constante</p>
+                    </div>
+                </div>
+                
+                <!-- Lecciones -->
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--teal);">
+                        <i data-lucide="book"></i>
+                    </div>
+                    <div class="stat-info">
+                        <p class="stat-label">Lecciones</p>
+                        <h3 class="stat-value">24/40</h3>
+                    </div>
+                </div>
+                
+                <!-- XP -->
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--coral);">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <div class="stat-info">
+                        <p class="stat-label">Experiencia</p>
+                        <h3 class="stat-value">2,450 XP</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- TABS CONTENT -->
+            
+            <!-- TAB 1: INICIO -->
+            <div class="tab-content active" id="tab-inicio">
+                <div class="dashboard-grid">
+                    
+                    <!-- Left Column -->
+                    <div class="dashboard-col-main">
+                        
+                        <!-- Continue Learning -->
+                        <section class="dashboard-section">
+                            <div class="section-header-dash">
+                                <h2 class="section-title-dash">Continuar aprendiendo</h2>
+                            </div>
+                            
+                            <div class="continue-card">
+                                <div class="continue-content">
+                                    <span class="badge badge-visual">VISIONAUTA</span>
+                                    <h3 class="continue-title">Ecuaciones de primer grado</h3>
+                                    <p class="continue-description">Aprende a resolver ecuaciones lineales con métodos visuales</p>
+                                    
+                                    <div class="continue-progress">
+                                        <div class="progress-info">
+                                            <span>Progreso</span>
+                                            <span class="progress-percent">65%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 65%"></div>
+                                        </div>
+                                        <p class="next-step">
+                                            <i data-lucide="play-circle"></i>
+                                            Siguiente: Video corto + quiz 👌
+                                        </p>
+                                    </div>
+                                    
+                                    <button class="btn btn-primary">
+                                        <i data-lucide="play"></i>
+                                        Continuar lección
+                                    </button>
+                                </div>
+                                
+                                <div class="continue-image">
+                                    <div class="continue-illustration">
+                                        <i data-lucide="trending-up" style="width: 80px; height: 80px; color: var(--teal);"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Tienda Lumi Coins -->
+                        <section class="dashboard-section shop-preview">
+                            <div class="section-header-dash">
+                                <h2 class="section-title-dash">
+                                    <i data-lucide="shopping-bag"></i>
+                                    Canjea tus Lumi Coins
+                                </h2>
+                                <a href="tienda.html" class="section-link">Ver tienda completa</a>
+                            </div>
+                            
+                            <div class="shop-info-banner">
+                                <div class="shop-info-content">
+                                    <div class="shop-info-icon">
+                                        <i data-lucide="sparkles"></i>
+                                    </div>
+                                    <div class="shop-info-text">
+                                        <h4>Tienes <strong id="coinsBalance2">1,250 Lumi Coins</strong></h4>
+                                        <p>Te alcanzan para una <strong>Mentoría Grupal</strong> o varios recursos premium. Visita nuestra tienda para ver todas las recompensas, cómo ganar más coins o comprarlos.</p>
+                                    </div>
+                                </div>
+                                <a href="tienda.html" class="btn btn-primary">
+                                    <i data-lucide="shopping-cart"></i>
+                                    Ir a la Tienda
+                                </a>
+                            </div>
+                            
+                            <div class="shop-items-grid">
+                                <div class="shop-item">
+                                    <div class="shop-item-badge">Popular</div>
+                                    <div class="shop-item-icon" style="background: var(--purple);">
+                                        <i data-lucide="video"></i>
+                                    </div>
+                                    <h4 class="shop-item-title">Mentoría 1 a 1</h4>
+                                    <p class="shop-item-description">Sesión personalizada de 60 min con un experto</p>
+                                    <div class="shop-item-footer">
+                                        <div class="shop-item-price">
+                                            <i data-lucide="coins"></i>
+                                            <span>2,500 coins</span>
+                                        </div>
+                                        <button class="btn-shop-small" disabled>
+                                            <i data-lucide="lock"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="shop-item available">
+                                    <div class="shop-item-badge success">Disponible</div>
+                                    <div class="shop-item-icon" style="background: var(--teal);">
+                                        <i data-lucide="users"></i>
+                                    </div>
+                                    <h4 class="shop-item-title">Mentoría Grupal</h4>
+                                    <p class="shop-item-description">Sesión grupal de 90 min con Q&A</p>
+                                    <div class="shop-item-footer">
+                                        <div class="shop-item-price">
+                                            <i data-lucide="coins"></i>
+                                            <span>800 coins</span>
+                                        </div>
+                                        <button class="btn-shop-small">
+                                            <i data-lucide="shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="shop-item available">
+                                    <div class="shop-item-badge success">Disponible</div>
+                                    <div class="shop-item-icon" style="background: var(--coral);">
+                                        <i data-lucide="book-open"></i>
+                                    </div>
+                                    <h4 class="shop-item-title">Curso Especializado</h4>
+                                    <p class="shop-item-description">Acceso a curso avanzado de tu elección</p>
+                                    <div class="shop-item-footer">
+                                        <div class="shop-item-price">
+                                            <i data-lucide="coins"></i>
+                                            <span>1,200 coins</span>
+                                        </div>
+                                        <button class="btn-shop-small">
+                                            <i data-lucide="shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="shop-item available">
+                                    <div class="shop-item-badge success">Disponible</div>
+                                    <div class="shop-item-icon" style="background: var(--amber);">
+                                        <i data-lucide="file-text"></i>
+                                    </div>
+                                    <h4 class="shop-item-title">Recursos Premium</h4>
+                                    <p class="shop-item-description">Pack de plantillas y guías descargables</p>
+                                    <div class="shop-item-footer">
+                                        <div class="shop-item-price">
+                                            <i data-lucide="coins"></i>
+                                            <span>300 coins</span>
+                                        </div>
+                                        <button class="btn-shop-small">
+                                            <i data-lucide="shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Rutas Activas -->
+                        <section class="dashboard-section">
+                            <div class="section-header-dash">
+                                <h2 class="section-title-dash">Tus rutas activas</h2>
+                                <a href="#" class="section-link">Ver todas</a>
+                            </div>
+                            
+                            <div class="routes-grid">
+                                <div class="route-card">
+                                    <div class="route-icon" style="background: var(--visual-teal);">
+                                        <i data-lucide="calculator"></i>
+                                    </div>
+                                    <h4 class="route-title">Matemáticas Visuales</h4>
+                                    <p class="route-lessons">12 de 20 lecciones</p>
+                                    <div class="route-progress-bar">
+                                        <div class="route-progress-fill" style="width: 60%; background: var(--visual-teal);"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="route-card">
+                                    <div class="route-icon" style="background: var(--audio-purple);">
+                                        <i data-lucide="globe"></i>
+                                    </div>
+                                    <h4 class="route-title">Historia Narrada</h4>
+                                    <p class="route-lessons">8 de 15 lecciones</p>
+                                    <div class="route-progress-bar">
+                                        <div class="route-progress-fill" style="width: 53%; background: var(--audio-purple);"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="route-card">
+                                    <div class="route-icon" style="background: var(--hands-orange);">
+                                        <i data-lucide="flask"></i>
+                                    </div>
+                                    <h4 class="route-title">Ciencias Prácticas</h4>
+                                    <p class="route-lessons">5 de 18 lecciones</p>
+                                    <div class="route-progress-bar">
+                                        <div class="route-progress-fill" style="width: 28%; background: var(--hands-orange);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                    </div>
+                    
+                    <!-- Right Column -->
+                    <div class="dashboard-col-sidebar">
+                        
+                        <!-- Perfil Card -->
+                        <section class="profile-card">
+                            <div class="profile-header">
+                                <div class="profile-avatar-large">
+                                    <i data-lucide="user"></i>
+                                </div>
+                                <h3 class="profile-name" id="profile-name">Usuario Prueba</h3>
+                                <span class="badge badge-visual">VISIONAUTA</span>
+                            </div>
+                            
+                            <div class="profile-level">
+                                <div class="level-info">
+                                    <span class="level-label">Nivel 18</span>
+                                    <span class="level-xp">450 / 600 XP</span>
+                                </div>
+                                <div class="level-progress">
+                                    <div class="level-fill" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-stats">
+                                <div class="profile-stat-item">
+                                    <i data-lucide="award"></i>
+                                    <span>12 Logros</span>
+                                </div>
+                                <div class="profile-stat-item">
+                                    <i data-lucide="clock"></i>
+                                    <span>48h estudiadas</span>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Logros Recientes -->
+                        <section class="achievements-card">
+                            <h3 class="card-title">
+                                <i data-lucide="trophy"></i>
+                                Logros recientes
+                            </h3>
+                            
+                            <div class="achievements-list">
+                                <div class="achievement-item">
+                                    <div class="achievement-icon" style="background: var(--amber);">
+                                        <i data-lucide="flame"></i>
+                                    </div>
+                                    <div class="achievement-info">
+                                        <h4>Racha de 7 días</h4>
+                                        <p>¡Imparable! 🔥</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="achievement-item">
+                                    <div class="achievement-icon" style="background: var(--teal);">
+                                        <i data-lucide="book-check"></i>
+                                    </div>
+                                    <div class="achievement-info">
+                                        <h4>20 lecciones completadas</h4>
+                                        <p>¡Terminaste 2 actividades esta semana! 📚</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="achievement-item">
+                                    <div class="achievement-icon" style="background: var(--purple);">
+                                        <i data-lucide="star"></i>
+                                    </div>
+                                    <div class="achievement-info">
+                                        <h4>Nivel 18</h4>
+                                        <p>Subiendo rápido ⭐</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Calendario Racha -->
+                        <section class="streak-card">
+                            <h3 class="card-title">
+                                <i data-lucide="calendar"></i>
+                                Tu racha semanal
+                            </h3>
+                            
+                            <div class="streak-calendar">
+                                <div class="streak-day completed">
+                                    <span class="day-label">L</span>
+                                    <div class="day-indicator"></div>
+                                </div>
+                                <div class="streak-day completed">
+                                    <span class="day-label">M</span>
+                                    <div class="day-indicator"></div>
+                                </div>
+                                <div class="streak-day completed">
+                                    <span class="day-label">X</span>
+                                    <div class="day-indicator"></div>
+                                </div>
+                                <div class="streak-day completed">
+                                    <span class="day-label">J</span>
+                                    <div class="day-indicator"></div>
+                                </div>
+                                <div class="streak-day completed">
+                                    <span class="day-label">V</span>
+                                    <div class="day-indicator"></div>
+                                </div>
+                                <div class="streak-day completed">
+                                    <span class="day-label">S</span>
+                                    <div class="day-indicator"></div>
+                                </div>
+                                <div class="streak-day active">
+                                    <span class="day-label">D</span>
+                                    <div class="day-indicator"></div>
+                                </div>
+                            </div>
+                            
+                            <p class="streak-message">
+                                <i data-lucide="flame"></i>
+                                ¡7 días seguidos! Sigue así 🚀
+                            </p>
+                        </section>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- TAB 2: RECOMENDACIONES -->
+            <div class="tab-content" id="tab-recomendaciones">
+                <div class="recommendations-header">
+                    <h2>Recomendaciones para ti</h2>
+                    <p>Contenido personalizado según tu estilo de aprendizaje: <strong>Visionauta</strong></p>
+                </div>
+                
+                <div class="recommendations-grid">
+                    <!-- Video Recomendado -->
+                    <div class="recommendation-card">
+                        <div class="rec-badge visual">Para ti</div>
+                        <div class="rec-icon" style="background: var(--visual-teal);">
+                            <i data-lucide="play-circle"></i>
+                        </div>
+                        <h3 class="rec-title">Video: Mapas Mentales para Álgebra</h3>
+                        <p class="rec-description">Aprende a organizar visualmente ecuaciones complejas en 15 minutos</p>
+                        <div class="rec-meta">
+                            <span><i data-lucide="clock"></i> 15 min</span>
+                            <span><i data-lucide="eye"></i> Visual</span>
+                        </div>
+                        <button class="btn btn-primary btn-sm">
+                            <i data-lucide="play"></i>
+                            Ver ahora
+                        </button>
+                    </div>
+                    
+                    <!-- Infografía -->
+                    <div class="recommendation-card">
+                        <div class="rec-badge visual">Para ti</div>
+                        <div class="rec-icon" style="background: var(--teal);">
+                            <i data-lucide="image"></i>
+                        </div>
+                        <h3 class="rec-title">Infografía: Proceso Científico</h3>
+                        <p class="rec-description">Diagrama visual del método científico paso a paso</p>
+                        <div class="rec-meta">
+                            <span><i data-lucide="download"></i> Descargable</span>
+                            <span><i data-lucide="eye"></i> Visual</span>
+                        </div>
+                        <button class="btn btn-primary btn-sm">
+                            <i data-lucide="download"></i>
+                            Descargar
+                        </button>
+                    </div>
+                    
+                    <!-- Quiz Interactivo -->
+                    <div class="recommendation-card">
+                        <div class="rec-badge">Nuevo</div>
+                        <div class="rec-icon" style="background: var(--purple);">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <h3 class="rec-title">Quiz: Historia Antigua</h3>
+                        <p class="rec-description">Repasa tu tema pendiente con preguntas interactivas</p>
+                        <div class="rec-meta">
+                            <span><i data-lucide="clock"></i> 10 min</span>
+                            <span><i data-lucide="zap"></i> +50 XP</span>
+                        </div>
+                        <button class="btn btn-primary btn-sm">
+                            <i data-lucide="play"></i>
+                            Empezar quiz
+                        </button>
+                    </div>
+                    
+                    <!-- Simulación -->
+                    <div class="recommendation-card">
+                        <div class="rec-badge visual">Para ti</div>
+                        <div class="rec-icon" style="background: var(--hands-orange);">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <h3 class="rec-title">Simulación: Experimento Virtual</h3>
+                        <p class="rec-description">Practica reacciones químicas en un laboratorio virtual</p>
+                        <div class="rec-meta">
+                            <span><i data-lucide="clock"></i> 20 min</span>
+                            <span><i data-lucide="flask"></i> Interactivo</span>
+                        </div>
+                        <button class="btn btn-primary btn-sm">
+                            <i data-lucide="play"></i>
+                            Abrir simulador
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Otros estilos de aprendizaje -->
+                <section class="other-styles">
+                    <h3>También podrían gustarte</h3>
+                    <div class="other-styles-grid">
+                        <div class="style-suggestion">
+                            <div class="style-icon" style="background: var(--audio-purple);">
+                                <i data-lucide="headphones"></i>
+                            </div>
+                            <div class="style-info">
+                                <h4>Podcast: Historia Narrada</h4>
+                                <p>30 min • Formato audio</p>
+                            </div>
+                            <button class="btn-outline-sm">
+                                <i data-lucide="headphones"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="style-suggestion">
+                            <div class="style-icon" style="background: var(--logic-indigo);">
+                                <i data-lucide="puzzle"></i>
+                            </div>
+                            <div class="style-info">
+                                <h4>Desafío Lógico: Problemas</h4>
+                                <p>15 min • Razonamiento</p>
+                            </div>
+                            <button class="btn-outline-sm">
+                                <i data-lucide="puzzle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- TAB 3: HABILIDADES (ADULTING) -->
+            <div class="tab-content" id="tab-habilidades">
+            <div class="tab-content" id="tab-habilidades">
+                <div class="adulting-header">
+                    <h2>Habilidades para la vida</h2>
+                    <p>Aprende lo que la escuela no te enseña 💼</p>
+                </div>
+                
+                <div class="adulting-categories">
+                    <div class="adulting-category">
+                        <div class="category-icon" style="background: var(--purple);">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+                        <h3>Vida Laboral</h3>
+                        <ul class="adulting-list">
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Tu primera entrevista laboral</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Cómo escribir un CV efectivo</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Networking profesional</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="adulting-category">
+                        <div class="category-icon" style="background: var(--teal);">
+                            <i data-lucide="dollar-sign"></i>
+                        </div>
+                        <h3>Finanzas Personales</h3>
+                        <ul class="adulting-list">
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Tu primera declaración de impuestos</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Cómo hacer un presupuesto</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Decisiones financieras inteligentes</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="adulting-category">
+                        <div class="category-icon" style="background: var(--coral);">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <h3>Salud & Bienestar</h3>
+                        <ul class="adulting-list">
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Manejo del estrés y ansiedad</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Hábitos saludables sostenibles</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Tu primera consulta médica sola/o</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="adulting-category">
+                        <div class="category-icon" style="background: var(--amber);">
+                            <i data-lucide="calendar"></i>
+                        </div>
+                        <h3>Organización</h3>
+                        <ul class="adulting-list">
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Cómo organizar tu tiempo efectivamente</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Productividad sin burnout</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="adulting-link">
+                                    <i data-lucide="check"></i>
+                                    <span>Establecer metas realistas</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="adulting-cta">
+                    <div class="cta-content">
+                        <i data-lucide="lightbulb"></i>
+                        <div>
+                            <h4>¿Para qué estudio?</h4>
+                            <p>Estas habilidades te dan claridad del valor real de tu aprendizaje a corto plazo</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i data-lucide="compass"></i>
+                        Explorar más
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        
+    </main>
+    
+
+    <!-- Scripts -->
+    <script src="./main.js"></script>
+    <script src="./dashboard.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
